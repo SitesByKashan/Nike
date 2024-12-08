@@ -15,7 +15,7 @@ export default function HeroSection() {
             </section>
             <section className="w-full bg-white">
       {/* Image Section */}
-      <div className="relative w-full h-[977px] md:h-[70vh]">
+      {/* <div className="absolute w-full h-[977px] md:h-[70vh]">
         <Image className="w-[1344px] h-[700]"
           src="/assets/Image.png" // Replace with your image path
           alt="Nike Air Max Pulse"
@@ -23,7 +23,7 @@ export default function HeroSection() {
           objectFit="cover"
           quality={100}
         />
-      </div>
+      </div> */}
 
       {/* Text Section */}
       <div className="px-4 py-8 text-center w-[1008px] h-[229px]">
