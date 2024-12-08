@@ -1,10 +1,12 @@
+import Link from "next/link";
+
 export default function Cart() {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-[#FFFFFF]">
         {/* Container */}
-        <div className="max-w-7xl mx-auto px-4 py-8 lg:py-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto px-4 py-8  grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Bag Section */}
-          <div className="lg:col-span-2 bg-white shadow-md rounded-md p-6">
+          <div className="lg:col-span-2 bg-[#FFFFFF] p-6">
             {/* Free Delivery Banner */}
             <div className="bg-gray-100 p-4 mb-6 rounded-md text-sm">
               <span>Free Delivery</span> applies to orders of ₹10,000 or more.{" "}
@@ -85,7 +87,7 @@ export default function Cart() {
           </div>
   
           {/* Summary Section */}
-          <div className="bg-white shadow-md rounded-md p-6">
+          <div className="bg-[#FFFFFF] p-6">
             <h2 className="text-lg font-bold mb-6">Summary</h2>
             <div className="space-y-4 text-sm">
               <div className="flex justify-between">
@@ -102,16 +104,18 @@ export default function Cart() {
               <span>Total:</span>
               <span>₹ 20,890.00</span>
             </div>
-            <button className="w-full mt-6 bg-black text-white py-3 rounded-lg font-medium">
+            <Link href={"/CheckOut"}>
+            <button className="w-full mt-6 bg-black text-white py-3 rounded-3xl font-medium">
               Member Checkout
             </button>
+            </Link>
           </div>
         </div>
   
         {/* Recommendations */}
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4 mb-6">
           <h3 className="text-lg font-bold mt-12 mb-4">You Might Also Like</h3>
-          <div className="flex gap-12 overflow-x-scroll">
+          <div className="flex gap-12 overflow-x-scroll md:overflow-x-hidden">
             {/* Product 1 */}
             <div className="flex-shrink-0 w-48 ml-8">
               <img
@@ -126,7 +130,7 @@ export default function Cart() {
            {/* Product 2 */}
            <div className="flex-shrink-0 w-48">
               <img
-                src="/assets/Shoe1.png"
+                src="/assets/Shirt.png"
                 alt="Air Jordan"
                 className="w-full h-48 object-cover rounded-md border"
               />
@@ -137,7 +141,7 @@ export default function Cart() {
             {/* Product 3 */}
             <div className="flex-shrink-0 w-48">
               <img
-                src="/assets/Shoe1.png"
+                src="/assets/Shoe2.png"
                 alt="Air Jordan"
                 className="w-full h-48 object-cover rounded-md border"
               />
@@ -148,7 +152,7 @@ export default function Cart() {
             {/* Product 4 */}
             <div className="flex-shrink-0 w-48">
               <img
-                src="/assets/Shoe1.png"
+                src="/assets/Shirt2.png"
                 alt="Air Jordan"
                 className="w-full h-48 object-cover rounded-md border"
               />
@@ -159,7 +163,7 @@ export default function Cart() {
             {/* Product 6 */}
             <div className="flex-shrink-0 w-48">
               <img
-                src="/assets/Shoe1.png"
+                src="/assets/Shoes.png"
                 alt="Air Jordan"
                 className="w-full h-48 object-cover rounded-md border"
               />
