@@ -27,7 +27,7 @@ export default function Header() {
               Find a Store
             </Link>
             <div className="w-[1px] h-[14px] bg-[#111111]"></div>
-            <Link href={"/"} className="hover:text-gray-800">
+            <Link href={"/Help"} className="hover:text-gray-800">
               Help
             </Link>
             <div className="w-[1px] h-[14px] bg-[#111111]"></div>
