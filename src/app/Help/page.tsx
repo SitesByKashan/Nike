@@ -1,5 +1,6 @@
 import { FaClock, FaEnvelope, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 export default function Help() {
   return (
     <div className="bg-[#FFFFFF] min-h-screen py-8 font-helvetica">
@@ -34,8 +35,12 @@ export default function Help() {
               <a href="#" className="text-[#111111] hover:underline"> join us today.</a>
             </p>
             <div className="flex space-x-4 mb-6">
+                <Link href={"/JoinUs"}>
               <button className="bg-black text-white px-6 py-2 text-sm rounded-3xl">JOIN US</button>
+              </Link>
+              <Link href={'/'}>
               <button className="bg-black text-white px-6 py-2 text-sm rounded-3xl">SHOP NIKE</button>
+              </Link>
             </div>
 
             <h3 className="font-bold text-lg mb-4">FAQs</h3>
