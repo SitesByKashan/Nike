@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Cart() {
+export default function Bag() {
     return (
       <div className="min-h-screen bg-[#FFFFFF]">
         {/* Container */}
@@ -10,7 +10,7 @@ export default function Cart() {
             {/* Free Delivery Banner */}
             <div className="bg-gray-100 p-4 mb-6 rounded-md text-sm">
               <span>Free Delivery</span> applies to orders of ₹10,000 or more.{" "}
-              <a href="#" className="text-blue-500 underline">
+              <a href="#" className="text-[#111111] underline">
                 View details
               </a>
             </div>
@@ -113,7 +113,7 @@ export default function Cart() {
         </div>
   
         {/* Recommendations */}
-        <div className="max-w-7xl mx-auto px-4 mb-6">
+        <div className="max-w-7xl mx-auto px-4 mb-8">
           <h3 className="text-lg font-bold mt-12 mb-4">You Might Also Like</h3>
           <div className="flex gap-12 overflow-x-scroll md:overflow-x-hidden">
             {/* Product 1 */}

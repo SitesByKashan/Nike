@@ -46,11 +46,13 @@ export default function Header() {
       <header className="w-full h-[60px] flex justify-between items-center px-4 font-helvetica bg-[#FFFFFF]">
       {/* Left Side - Logo */}
       <div className="flex items-center">
+        <Link href={"/"}>
         <img
           src="/assets/Nike.png"
           alt="Nike Logo"
           className="w-[50px] h-[50px]"
         />
+        </Link>
       </div>
 
       {/* Middle - Navigation Links */}
@@ -89,10 +91,17 @@ export default function Header() {
         {/* Wishlist Icon */}
         <div className="flex items-center">
           <img
-            src="/assets/Search Icon.png"
+            src="/assets/Heart.png"
             alt="Wishlist Icon"
-            className="w-[84px] h-[60px]"
+            className="w-[36px] h-[36px]"
           />
+          <Link href={"/Bag"}>
+            <img
+            src="/assets/Bag.png"
+            alt="Wishlist Icon"
+            className="w-[36px] h-[36px]"
+          />
+          </Link>
         </div>
       </div>
 
