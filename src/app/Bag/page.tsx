@@ -28,7 +28,7 @@ export default function Bag() {
                 <div className="flex-1">
                   <h3 className="font-semibold">Nike Dri-FIT ADV TechKnit Ultra</h3>
                   <p className="text-gray-500 text-sm">
-                    Men's Short-Sleeve Running Top
+                    Men&apos;s Short-Sleeve Running Top
                     <br />
                     Ashen Slate/Cobalt Bliss
                   </p>
@@ -59,7 +59,7 @@ export default function Bag() {
                 <div className="flex-1">
                   <h3 className="font-semibold">Nike Air Max 97 SE</h3>
                   <p className="text-gray-500 text-sm">
-                    Men's Shoes
+                    Men&apos;s Shoes
                     <br />
                     Flat Pewter/Light Bone/Black/White
                   </p>
@@ -124,7 +124,7 @@ export default function Bag() {
                 className="w-full h-48 object-cover rounded-md border"
               />
               <h4 className="font-semibold mt-2">Air Jordan 1 Mid SE Craft</h4>
-              <p className="text-gray-500">Men's Shoes</p>
+              <p className="text-gray-500">Men&apos;s Shoes</p>
               <p className="font-bold">MRP: ₹ 12,295.00</p>
             </div>
            {/* Product 2 */}
@@ -135,7 +135,7 @@ export default function Bag() {
                 className="w-full h-48 object-cover rounded-md border"
               />
               <h4 className="font-semibold mt-2">Air Jordan 1 Mid SE Craft</h4>
-              <p className="text-gray-500">Men's Shoes</p>
+              <p className="text-gray-500">Men&apos;s Shoes</p>
               <p className="font-bold">MRP: ₹ 12,295.00</p>
             </div>
             {/* Product 3 */}
@@ -146,7 +146,7 @@ export default function Bag() {
                 className="w-full h-48 object-cover rounded-md border"
               />
               <h4 className="font-semibold mt-2">Air Jordan 1 Mid SE Craft</h4>
-              <p className="text-gray-500">Men's Shoes</p>
+              <p className="text-gray-500">Men&apos;s Shoes</p>
               <p className="font-bold">MRP: ₹ 12,295.00</p>
             </div>
             {/* Product 4 */}
@@ -157,7 +157,7 @@ export default function Bag() {
                 className="w-full h-48 object-cover rounded-md border"
               />
               <h4 className="font-semibold mt-2">Air Jordan 1 Mid SE Craft</h4>
-              <p className="text-gray-500">Men's Shoes</p>
+              <p className="text-gray-500">Men&apos;s Shoes</p>
               <p className="font-bold">MRP: ₹ 12,295.00</p>
             </div>
             {/* Product 6 */}
@@ -168,7 +168,7 @@ export default function Bag() {
                 className="w-full h-48 object-cover rounded-md border"
               />
               <h4 className="font-semibold mt-2">Air Jordan 1 Mid SE Craft</h4>
-              <p className="text-gray-500">Men's Shoes</p>
+              <p className="text-gray-500">Men&apos;s Shoes</p>
               <p className="font-bold">MRP: ₹ 12,295.00</p>
             </div>
             

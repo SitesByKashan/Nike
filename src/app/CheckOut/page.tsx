@@ -6,7 +6,7 @@ export default function CheckOut() {
           <div className="lg:col-span-2 bg-white w-[440px] p-6">
             <h1 className="text-[21px] font-medium mb-4">How would you like to get your order?</h1>
             <p className="text-[#757575] mb-6">
-            Customs regulation for India require a copy of the recipient's KYC. The address on the KYC needs to match the shipping address. Our courier will contact you via SMS/email to obtain a copy of your KYC. The KYC will be stored securely and used solely for the purpose of clearing customs (including sharing it with customs officials) for all orders and returns. If your KYC does not match your shipping address, please click the link for more information. Learn More
+            Customs regulation for India require a copy of the recipient&apos;s KYC. The address on the KYC needs to match the shipping address. Our courier will contact you via SMS/email to obtain a copy of your KYC. The KYC will be stored securely and used solely for the purpose of clearing customs (including sharing it with customs officials) for all orders and returns. If your KYC does not match your shipping address, please click the link for more information. Learn More
             </p>
   
             {/* Delivery Options */}
@@ -91,7 +91,7 @@ export default function CheckOut() {
   
               {/* Contact Information */}
               <div>
-                <h2 className="text-lg font-medium mb-4">What’s your contact information?</h2>
+                <h2 className="text-lg font-medium mb-4">What&apos;s your contact information?</h2>
                 <input
                   type="email"
                   placeholder="Email"
@@ -106,7 +106,7 @@ export default function CheckOut() {
   
               {/* PAN */}
               <div>
-                <h2 className="text-lg font-medium mb-4">What’s your PAN?</h2>
+                <h2 className="text-lg font-medium mb-4">What&apos;s your PAN?</h2>
                 <input
                   type="text"
                   placeholder="PAN"
@@ -132,7 +132,7 @@ export default function CheckOut() {
                   className="w-[128px] h-[128px] rounded-md border mr-4"
                 />
                 <div>
-                  <p className="font-normal text-[13px]">Nike Dri-FIT ADV TechKnit Ultra Men's Short-Sleeve Running Top</p>
+                  <p className="font-normal text-[13px]">Nike Dri-FIT ADV TechKnit Ultra Men&apos;s Short-Sleeve Running Top</p>
                   <p className="text-gray-500">Qty: 1</p>
                 </div>
               </li>

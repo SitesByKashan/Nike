@@ -96,7 +96,7 @@ export default function JoinUs() {
           </label>
         </div>
         <p className="text-xs text-gray-500 mb-6 text-center">
-          By creating an account, you agree to Nike's{" "}
+          By creating an account, you agree to Nike&apos;s{" "}
           <a href="#" className="underline">
             Privacy Policy
           </a>{" "}

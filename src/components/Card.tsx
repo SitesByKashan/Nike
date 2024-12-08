@@ -1,5 +1,4 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import Image from 'next/image'
 import React from 'react'
 
 const Card = () => {
@@ -33,7 +32,7 @@ const Card = () => {
                 className="w-full h-48 object-cover rounded-md border"
               />
               <h4 className="font-medium mt-2 ">Air Jordan 1 Mid SE Craft</h4>
-              <p className="text-gray-500">Men's Shoes</p>
+              <p className="text-gray-500">Men&apos;s Shoes</p>
             </div>
            {/* Product 2 */}
            <div className="flex-shrink-0 w-48">
@@ -43,7 +42,7 @@ const Card = () => {
                 className="w-full h-48 object-cover rounded-md border"
               />
               <h4 className="font-medium mt-2">Air Jordan 1 Mid SE Craft</h4>
-              <p className="text-gray-500">Men's Shoes</p>
+              <p className="text-gray-500">Men&apos;s Shoes</p>
             </div>
             {/* Product 3 */}
             <div className="flex-shrink-0 w-48">
@@ -53,7 +52,7 @@ const Card = () => {
                 className="w-full h-48 object-cover rounded-md border"
               />
               <h4 className="font-medium mt-2">Air Jordan 1 Mid SE Craft</h4>
-              <p className="text-gray-500">Men's Shoes</p>
+              <p className="text-gray-500">Men&apos;s Shoes</p>
             </div>
             {/* Product 4 */}
             <div className="flex-shrink-0 w-48">
@@ -63,7 +62,7 @@ const Card = () => {
                 className="w-full h-48 object-cover rounded-md border"
               />
               <h4 className="font-medium mt-2">Air Jordan 1 Mid SE Craft</h4>
-              <p className="text-gray-500">Men's Shoes</p>
+              <p className="text-gray-500">Men&apos;s Shoes</p>
             </div>
             {/* Product 6 */}
             <div className="flex-shrink-0 w-48">
@@ -73,7 +72,7 @@ const Card = () => {
                 className="w-full h-48 object-cover rounded-md border"
               />
               <h4 className="font-medium mt-2">Air Jordan 1 Mid SE Craft</h4>
-              <p className="text-gray-500">Men's Shoes</p>
+              <p className="text-gray-500">Men&apos;s Shoes</p>
             </div>
             
           </div>

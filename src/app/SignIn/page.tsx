@@ -40,7 +40,7 @@ export default function SignIn() {
               Forgotten your password?
             </a>
           </div>
-          <p className="text-[#38D8D8D] text-[12px] items-center p-4 text-center">By logging in, you agree to Nike's Privacy Policy and Terms of Use.</p>
+          <p className="text-[#38D8D8D] text-[12px] items-center p-4 text-center">By logging in, you agree to Nike&apos;s Privacy Policy and Terms of Use.</p>
           <button
             type="submit"
             className="w-full bg-black text-white py-2 rounded-md hover:bg-gray-800"

@@ -1,4 +1,3 @@
-import { FaClock, FaEnvelope, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 export default function Help() {
@@ -28,10 +27,10 @@ export default function Help() {
               <li>Apple Pay</li>
             </ul>
             <p className="text-sm mb-4">
-              If you enter your PAN information at checkout, you'll be able to pay for your order with PayTM or a local credit or debit card.
+              If you enter your PAN information at checkout, you&apos;ll be able to pay for your order with PayTM or a local credit or debit card.
             </p>
             <p className="text-sm mb-6">
-              <strong>Nike Members</strong> can store multiple debit or credit cards in their profile for faster checkout. If you're not already a Member, 
+              <strong>Nike Members</strong> can store multiple debit or credit cards in their profile for faster checkout. If you&apos;re not already a Member, 
               <a href="#" className="text-[#111111] hover:underline"> join us today.</a>
             </p>
             <div className="flex space-x-4 mb-6">
@@ -51,7 +50,7 @@ export default function Help() {
               </p>
               <p>
                 <strong>Can I pay for my order with multiple methods?</strong><br />
-                No, payment for Nike orders can’t be split between multiple payment methods.
+                No, payment for Nike orders can&apos;t be split between multiple payment methods.
               </p>
               <p>
                 <strong>What payment method is accepted for SNKRS orders?</strong><br />
@@ -93,7 +92,7 @@ export default function Help() {
             alt={""} 
             width={100} 
             height={100} />
-            <span className="font-semibold text-sm">We’ll reply within</span>
+            <span className="font-semibold text-sm">We&apos;ll reply within</span>
               <p className="text-sm">five business days</p>
             </div>
             <div className="flex flex-col items-center mb-8">
