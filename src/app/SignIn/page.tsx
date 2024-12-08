@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SignIn() {
   return (
-    <div className="flex mt-2 justify-center min-h-screen bg-[#FFFFFF]">
+    <div className="flex mt-2 justify-center mb-10 bg-[#FFFFFF]">
       <div className="w-[90%] max-w-[380px] h-auto bg-[#FFFFFF] px-6">
         <div className="text-center mb-3">
           <img

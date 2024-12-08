@@ -31,7 +31,7 @@ export default function Header() {
               Help
             </Link>
             <div className="w-[1px] h-[14px] bg-[#111111]"></div>
-            <Link href={"/"} className="hover:text-gray-800">
+            <Link href={"/JoinUs"} className="hover:text-gray-800">
               Join Us
             </Link>
             <div className="w-[1px] h-[14px] bg-[#111111] "></div>
