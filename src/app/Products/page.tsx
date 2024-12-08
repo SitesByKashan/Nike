@@ -88,7 +88,7 @@ export default function Products() {
     return (
       <div className="flex">
         {/* Sidebar - Filters */}
-        <aside className="w-1/4 bg-white p-4">
+        <aside className="w-1/4 bg-white p-4 pl-12">
           <h2 className="text-lg font-semibold mb-4">New (500)</h2>
           <div className="mb-6">
             <h3 className="font-semibold mb-2">Shop</h3>
