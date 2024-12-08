@@ -102,23 +102,23 @@ export default function Products() {
           <div className="mb-6">
             <h3 className="font-medium">Gender</h3>
             <ul className="space-y-2">
-              <li><label><input type="checkbox" className="mr-2" />Men</label></li>
-              <li><label><input type="checkbox" className="mr-2" />Women</label></li>
-              <li><label><input type="checkbox" className="mr-2" />Unisex</label></li>
+              <li><label><input type="checkbox" className="mr-2 accent-black" />Men</label></li>
+              <li><label><input type="checkbox" className="mr-2 accent-black" />Women</label></li>
+              <li><label><input type="checkbox" className="mr-2 accent-black" />Unisex</label></li>
             </ul>
           </div>
           <div className="mb-6">
             <h3 className="font-medium">Kids</h3>
             <ul className="space-y-2">
-              <li><label><input type="checkbox" className="mr-2" />Boys</label></li>
-              <li><label><input type="checkbox" className="mr-2" />Girls</label></li>
+              <li><label><input type="checkbox" className="mr-2 accent-black" />Boys</label></li>
+              <li><label><input type="checkbox" className="mr-2 accent-black" />Girls</label></li>
             </ul>
           </div>
           <div>
             <h3 className="font-medium">Shop By Price</h3>
             <ul className="space-y-2">
-              <li><label><input type="radio" name="price" className="mr-2" />Under ₹ 7,500</label></li>
-              <li><label><input type="radio" name="price" className="mr-2" />₹ 7,500 - ₹ 15,000</label></li>
+              <li><label><input type="radio" name="price" className="mr-2 accent-black" />Under ₹ 7,500</label></li>
+              <li><label><input type="radio" name="price" className="mr-2 accent-black" />₹ 7,500 - ₹ 15,000</label></li>
             </ul>
           </div>
         </aside>
