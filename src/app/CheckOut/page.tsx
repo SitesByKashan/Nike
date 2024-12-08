@@ -80,11 +80,11 @@ export default function CheckOut() {
               {/* Save Address */}
               <div className="space-y-2">
                 <label className="flex items-center space-x-2">
-                  <input type="checkbox" className="h-4 w-4" />
+                  <input type="checkbox" className="accent-[#111111] h-4 w-4" />
                   <span>Save this address to my profile</span>
                 </label>
                 <label className="flex items-center space-x-2">
-                  <input type="checkbox" className="h-4 w-4" />
+                  <input type="checkbox" className="accent-[#111111] h-4 w-4" />
                   <span>Make this my preferred address</span>
                 </label>
               </div>

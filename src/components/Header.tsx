@@ -57,22 +57,22 @@ export default function Header() {
 
       {/* Middle - Navigation Links */}
       <nav className="hidden md:flex ml-44 space-x-4 text-[15px]">
-        <Link href="/" className="hover:text-gray-600">
+        <Link href="/Products" className="hover:text-gray-600">
           New & Featured
         </Link>
-        <Link href="/" className="hover:text-gray-600">
+        <Link href="/Products" className="hover:text-gray-600">
           Men
         </Link>
-        <Link href="/" className="hover:text-gray-600">
+        <Link href="/Products" className="hover:text-gray-600">
           Women
         </Link>
-        <Link href="/" className="hover:text-gray-600">
+        <Link href="/Products" className="hover:text-gray-600">
           Kids
         </Link>
-        <Link href="/" className="hover:text-gray-600">
+        <Link href="/Products" className="hover:text-gray-600">
           Sale
         </Link>
-        <Link href="/" className="hover:text-gray-600">
+        <Link href="/Products" className="hover:text-gray-600">
           SNKRS
         </Link>
       </nav>
@@ -128,22 +128,22 @@ export default function Header() {
       {isMenuOpen && (
         <div className="absolute top-[80px] left-0 w-full bg-white shadow-md md:hidden">
           <nav className="flex flex-col items-center space-y-4 p-4">
-            <Link href="/" className="hover:text-gray-600">
+            <Link href="/Products" className="hover:text-gray-600">
               New & Featured
             </Link>
-            <Link href="/" className="hover:text-gray-600">
+            <Link href="/Products" className="hover:text-gray-600">
               Men
             </Link>
-            <Link href="/" className="hover:text-gray-600">
+            <Link href="/Products" className="hover:text-gray-600">
               Women
             </Link>
-            <Link href="/" className="hover:text-gray-600">
+            <Link href="/Products" className="hover:text-gray-600">
               Kids
             </Link>
-            <Link href="/" className="hover:text-gray-600">
+            <Link href="/Products" className="hover:text-gray-600">
               Sale
             </Link>
-            <Link href="/" className="hover:text-gray-600">
+            <Link href="/Products" className="hover:text-gray-600">
               SNKRS
             </Link>
             {/* Center - Search and Wishlist for Small Screens */}
@@ -158,12 +158,19 @@ export default function Header() {
               </div>
               {/* Wishlist Icon */}
               <div className="flex items-center">
-                <img
-                  src="/assets/Search Icon.png"
-                  alt="Wishlist Icon"
-                  className="w-[40px] h-[40px]"
-                />
-              </div>
+          <img
+            src="/assets/Heart.png"
+            alt="Wishlist Icon"
+            className="w-[36px] h-[36px]"
+          />
+          <Link href={"/Bag"}>
+            <img
+            src="/assets/Bag.png"
+            alt="Wishlist Icon"
+            className="w-[36px] h-[36px]"
+          />
+          </Link>
+        </div>
             </div>
           </nav>
         </div>
