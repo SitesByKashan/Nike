@@ -21,6 +21,13 @@
     text-wrap: balance;
   }
 }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  width: 100%;
+}
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }

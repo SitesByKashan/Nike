@@ -27,14 +27,14 @@ export default function Header() {
                     <div className="w-[2px] h-[14px] bg-[#111111]"></div>
                     <Link href={"/"}>Join Us</Link>
                     <div className="w-[2px] h-[14px] bg-[#111111]"></div>
-                    <Link href={"/"} className="hover:text-gray-900">Sign In</Link>
+                    <Link href={"/SignIn"} className="hover:text-gray-900">Sign In</Link>
                 </nav>
 
             </div>
             
 </header>
 
-            <header className="w-full h-[60px] flex justify-between items-center  shadow-sm font-helvetica">
+            <header className="w-full h-[60px] flex justify-between items-center font-helvetica bg-[#FFFFFF]">
       {/* Left Side - Logo */}
       <div className="flex items-center ml-7">
         <img
