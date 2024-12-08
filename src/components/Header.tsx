@@ -23,7 +23,7 @@ export default function Header() {
 
           {/* Navigation Section */}
           <nav className="flex flex-wrap items-center text-sm text-[#111111] font-helvetica space-x-4 md:space-x-6 ">
-            <Link href={"/"} className="hover:text-gray-800">
+            <Link href={"/Stores"} className="hover:text-gray-800">
               Find a Store
             </Link>
             <div className="w-[1px] h-[14px] bg-[#111111]"></div>
