@@ -54,23 +54,15 @@ export default function Gear() {
                             height={250}
                         />
                         <div className='flex justify-between items-center flex-wrap px-2 pt-2'>
-
                             <div className='text-xs font-bold pr-2'>Nike Dri-FIT Challenger</div>
-
                             <div className='text-sm'>₹ 3 895</div>
                         </div>
-
                         <div>
-
                             <span className='text-sm text-gray-700 px-2 '>{`Men's`} 18cm (approx.) 2</span> <br />
                             <span className='text-sm text-gray-700 px-2 '>-in-1 Versatile Shorts </span>
-
                         </div>
-
                     </div>
-
                 </div>
-
                 <div className='flex gap-x-4'>
                     <div>
                         <div className='flex items-center mb-2 opacity-0'>
@@ -95,18 +87,13 @@ export default function Gear() {
                         />
 
                         <div className='flex justify-between items-center flex-wrap px-2 pt-2'>
-
                             <div className='text-xs font-bold pr-2'>Nike Dri-FIT ADV Run Division</div>
                             <div className='text-sm'>₹ 2 495</div>
                         </div>
-
                         <div>
-
                             <span className='text-sm text-gray-700 px-2 '>{`Women's`} Long-Sleeve </span> <br />
                             <span className='text-sm text-gray-700 px-2 '>Running Top</span>
-
                         </div>
-
                     </div>
 
                     <div>
@@ -126,7 +113,7 @@ export default function Gear() {
                             width={280}
                             height={250}
                         />
-                        <div className='flex justify-between flex-wrap items-center px-2 pt-2'>
+                        <div className='flex justify-between flex-wrap items-center pr-16 pt-2'>
                             <div className='text-sm font-bold pr-2'>Nike Fast</div>
                             <div className='text-sm'>₹ 3 795</div>
                         </div>

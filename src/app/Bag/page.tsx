@@ -18,68 +18,73 @@ export default function Bag() {
             {/* Bag Items */}
             <h2 className="text-lg font-bold mb-4">Bag</h2>
             <div className="space-y-8">
-              {/* Item 1 */}
-              <div className="flex gap-4">
-                <img
-                  src="/assets/Shirt.png"
-                  alt="Nike Shirt"
-                  className="w-24 h-24 object-cover rounded-md border"
-                />
-                <div className="flex-1">
-                  <h3 className="font-semibold">Nike Dri-FIT ADV TechKnit Ultra</h3>
-                  <p className="text-gray-500 text-sm">
-                    Men&apos;s Short-Sleeve Running Top
-                    <br />
-                    Ashen Slate/Cobalt Bliss
-                  </p>
-                  <p className="text-sm">
-                    <span className="font-bold">Size:</span> L
-                    <span className="mx-2">|</span>
-                    <span className="font-bold">Quantity:</span> 1
-                  </p>
-                  <div className="mt-4 flex gap-4 text-sm text-gray-500">
-                    <button className="flex items-center gap-2">
-                      ❤️ <span>Save</span>
-                    </button>
-                    <button className="flex items-center gap-2">
-                      🗑️ <span>Remove</span>
-                    </button>
-                  </div>
-                </div>
-                <p className="font-bold">MRP: ₹ 3,895.00</p>
-              </div>
-  
-              {/* Item 2 */}
-              <div className="flex gap-4">
-                <img
-                  src="/assets/Shoes.png"
-                  alt="Nike Shoes"
-                  className="w-24 h-24 object-cover rounded-md border"
-                />
-                <div className="flex-1">
-                  <h3 className="font-semibold">Nike Air Max 97 SE</h3>
-                  <p className="text-gray-500 text-sm">
-                    Men&apos;s Shoes
-                    <br />
-                    Flat Pewter/Light Bone/Black/White
-                  </p>
-                  <p className="text-sm">
-                    <span className="font-bold">Size:</span> 8
-                    <span className="mx-2">|</span>
-                    <span className="font-bold">Quantity:</span> 1
-                  </p>
-                  <div className="mt-4 flex gap-4 text-sm text-gray-500">
-                    <button className="flex items-center gap-2">
-                      ❤️ <span>Save</span>
-                    </button>
-                    <button className="flex items-center gap-2">
-                      🗑️ <span>Remove</span>
-                    </button>
-                  </div>
-                </div>
-                <p className="font-bold">MRP: ₹ 16,995.00</p>
-              </div>
-            </div>
+  {/* Item 1 */}
+  <div className="flex flex-wrap gap-4 sm:gap-6 md:flex-nowrap">
+    <img
+      src="/assets/Shirt.png"
+      alt="Nike Shirt"
+      className="w-24 h-24 object-cover rounded-md border sm:w-32 sm:h-32"
+    />
+    <div className="flex-1">
+      <h3 className="font-semibold text-sm sm:text-base">
+        Nike Dri-FIT ADV TechKnit Ultra
+      </h3>
+      <p className="text-gray-500 text-xs sm:text-sm">
+        Men&apos;s Short-Sleeve Running Top
+        <br />
+        Ashen Slate/Cobalt Bliss
+      </p>
+      <p className="text-xs sm:text-sm">
+        <span className="font-bold">Size:</span> L
+        <span className="mx-2">|</span>
+        <span className="font-bold">Quantity:</span> 1
+      </p>
+      <div className="mt-4 flex flex-wrap gap-4 text-xs text-gray-500 sm:text-sm">
+        <button className="flex items-center gap-2">
+          ❤️ <span>Save</span>
+        </button>
+        <button className="flex items-center gap-2">
+          🗑️ <span>Remove</span>
+        </button>
+      </div>
+    </div>
+    <p className="font-bold text-sm sm:text-base">MRP: ₹ 3,895.00</p>
+  </div>
+
+  {/* Item 2 */}
+  <div className="flex flex-wrap gap-4 sm:gap-6 md:flex-nowrap">
+    <img
+      src="/assets/Shoes.png"
+      alt="Nike Shoes"
+      className="w-24 h-24 object-cover rounded-md border sm:w-32 sm:h-32"
+    />
+    <div className="flex-1">
+      <h3 className="font-semibold text-sm sm:text-base">
+        Nike Air Max 97 SE
+      </h3>
+      <p className="text-gray-500 text-xs sm:text-sm">
+        Men&apos;s Shoes
+        <br />
+        Flat Pewter/Light Bone/Black/White
+      </p>
+      <p className="text-xs sm:text-sm">
+        <span className="font-bold">Size:</span> 8
+        <span className="mx-2">|</span>
+        <span className="font-bold">Quantity:</span> 1
+      </p>
+      <div className="mt-4 flex flex-wrap gap-4 text-xs text-gray-500 sm:text-sm">
+        <button className="flex items-center gap-2">
+          ❤️ <span>Save</span>
+        </button>
+        <button className="flex items-center gap-2">
+          🗑️ <span>Remove</span>
+        </button>
+      </div>
+    </div>
+    <p className="font-bold text-sm sm:text-base">MRP: ₹ 16,995.00</p>
+  </div>
+</div>
+
   
             {/* Favourites Section */}
             <h3 className="text-lg font-bold mt-12">Favourites</h3>

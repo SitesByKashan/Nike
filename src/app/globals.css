@@ -34,4 +34,17 @@ body {
 .font-helvetica {
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
+.ess-ul li{
+  color:gray;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  align-items: center;
+  
+}
+.ess-ul{
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
 
