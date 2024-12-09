@@ -53,7 +53,7 @@ export default function Gear() {
                             width={280}
                             height={250}
                         />
-                        <div className='flex justify-between items-center flex-wrap px-2 pt-2'>
+                        <div className='flex flex-col med:flex-row justify-between items-center flex-wrap px-2 pt-2'>
                             <div className='text-xs font-bold pr-2'>Nike Dri-FIT Challenger</div>
                             <div className='text-sm'>₹ 3 895</div>
                         </div>
@@ -113,7 +113,7 @@ export default function Gear() {
                             width={280}
                             height={250}
                         />
-                        <div className='flex justify-between flex-wrap items-center pr-16 pt-2'>
+                        <div className='flex flex-col med:flex-row  justify-between flex-wrap items-center pr-16 pt-2'>
                             <div className='text-sm font-bold pr-2'>Nike Fast</div>
                             <div className='text-sm'>₹ 3 795</div>
                         </div>

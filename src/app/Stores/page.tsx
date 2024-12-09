@@ -29,7 +29,7 @@ export default function Stores() {
           <input
             type="text"
             placeholder="Search Location"
-            className="w-full p-3 border rounded-md focus:ring focus:outline-none"
+            className="w-full p-3 mr-3 border rounded-md focus:ring focus:outline-none"
           />
         </div>
         <div className="w-[250px] h-[1px] bg-[#111111] my-4"></div>
