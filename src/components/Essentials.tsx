@@ -36,7 +36,7 @@ export default function Essentials () {
             </div>
         </div>
         <div className='flex justify-evenly flex-wrap px-24 md:px-36 pb-20 items-center '>
-            <div className='w-full'>
+            <div className='w-full md:w-auto'>
                 <span className='font-semibold pl-3'>Icons</span> <br /> <br />
                 <ul className='ess-ul'>
                     <li>Air Force 1</li>
@@ -45,7 +45,7 @@ export default function Essentials () {
                     <li>Air Max 95</li>
                 </ul>
             </div>
-            <div className='w-full'>
+            <div className='w-full md:w-auto'>
                 <span className='font-semibold pl-3'>Shoes</span> <br /> <br />
                  <ul className='ess-ul '>
                     <li>All Shoes</li>
