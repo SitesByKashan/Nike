@@ -38,7 +38,7 @@ async function uploadImageToSanity(imageUrl) {
 async function importData() {
   try {
     console.log('migrating data please wait...');
-
+    // https://6783a7428b6c7a1316f51b08.mockapi.io/Product
     // API endpoint containing car data
     const response = await axios.get('https://template-03-api.vercel.app/api/products');
     const products = response.data.data;

@@ -1,4 +1,4 @@
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import Social_Media from "./Social_Media";
 
 export default function Footer() {
     return (
@@ -86,22 +86,7 @@ export default function Footer() {
           </div>
   
            {/* Social Icons Section */}
-        <div className="w-full mt-6">
-          <div className="border-t border-gray-700 pt-6 flex justify-between items-center text-sm text-gray-400">
-            <p>© 2023 Nike, Inc. All Rights Reserved</p>
-            <div className="flex space-x-4">
-              <a href="#" className="hover:text-white">
-                <FaTwitter className="h-6 w-6" />
-              </a>
-              <a href="#" className="hover:text-white">
-                <FaFacebook className="h-6 w-6" />
-              </a>
-              <a href="#" className="hover:text-white">
-                <FaInstagram className="h-6 w-6" />
-              </a>
-            </div>
-          </div>
-        </div>
+        <Social_Media/>
       </div>
     </footer>
     );

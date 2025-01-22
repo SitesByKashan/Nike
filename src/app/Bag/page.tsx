@@ -1,6 +1,13 @@
+"use client"
+import Recommendation from "@/components/Recommendation";
 import Link from "next/link";
+import { useCart } from "@/components/CartContext";
+import Image from "next/image";
 
 export default function Bag() {
+  const { cart, removeFromCart, updateCartItemQuantity } = useCart();
+  const subtotal = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+
     return (
       <div className="min-h-screen bg-[#FFFFFF]">
         {/* Container */}
@@ -16,73 +23,57 @@ export default function Bag() {
             </div>
   
             {/* Bag Items */}
-            <h2 className="text-lg font-bold mb-4">Bag</h2>
+            <h2 className="text-lg font-bold mb-2">Your Cart</h2>
             <div className="space-y-8">
-  {/* Item 1 */}
-  <div className="flex flex-wrap gap-4 sm:gap-6 md:flex-nowrap">
-    <img
-      src="/assets/Shirt.png"
-      alt="Nike Shirt"
-      className="w-24 h-24 object-cover rounded-md border sm:w-32 sm:h-32"
-    />
-    <div className="flex-1">
-      <h3 className="font-semibold text-sm sm:text-base">
-        Nike Dri-FIT ADV TechKnit Ultra
-      </h3>
-      <p className="text-gray-500 text-xs sm:text-sm">
-        Men&apos;s Short-Sleeve Running Top
-        <br />
-        Ashen Slate/Cobalt Bliss
-      </p>
-      <p className="text-xs sm:text-sm">
-        <span className="font-bold">Size:</span> L
-        <span className="mx-2">|</span>
-        <span className="font-bold">Quantity:</span> 1
-      </p>
-      <div className="mt-4 flex flex-wrap gap-4 text-xs text-gray-500 sm:text-sm">
-        <button className="flex items-center gap-2">
-          ❤️ <span>Save</span>
-        </button>
-        <button className="flex items-center gap-2">
-          🗑️ <span>Remove</span>
-        </button>
-      </div>
-    </div>
-    <p className="font-bold text-sm sm:text-base">MRP: ₹ 3,895.00</p>
-  </div>
-
-  {/* Item 2 */}
-  <div className="flex flex-wrap gap-4 sm:gap-6 md:flex-nowrap">
-    <img
-      src="/assets/Shoes.png"
-      alt="Nike Shoes"
-      className="w-24 h-24 object-cover rounded-md border sm:w-32 sm:h-32"
-    />
-    <div className="flex-1">
-      <h3 className="font-semibold text-sm sm:text-base">
-        Nike Air Max 97 SE
-      </h3>
-      <p className="text-gray-500 text-xs sm:text-sm">
-        Men&apos;s Shoes
-        <br />
-        Flat Pewter/Light Bone/Black/White
-      </p>
-      <p className="text-xs sm:text-sm">
-        <span className="font-bold">Size:</span> 8
-        <span className="mx-2">|</span>
-        <span className="font-bold">Quantity:</span> 1
-      </p>
-      <div className="mt-4 flex flex-wrap gap-4 text-xs text-gray-500 sm:text-sm">
-        <button className="flex items-center gap-2">
-          ❤️ <span>Save</span>
-        </button>
-        <button className="flex items-center gap-2">
-          🗑️ <span>Remove</span>
-        </button>
-      </div>
-    </div>
-    <p className="font-bold text-sm sm:text-base">MRP: ₹ 16,995.00</p>
-  </div>
+            {cart.length === 0 ? (
+            <div className="flex w-full items-center justify-center">
+                    <Image
+                      src={"/assets/Cart_Empty.jpg"}
+                      width={300}
+                      height={300}
+                      alt={"Your Cart Is Empty"}
+                      className="mb-4"
+                    />
+                  </div>
+        ) : (
+          <div className="space-y-8">
+            {cart.map((item) => (
+              <div key={item.id} className="flex gap-4">
+                <img
+                  src={item.imageUrl}
+                  alt={item.name}
+                  className="w-24 h-24 object-cover rounded-md border"
+                />
+                <div className="flex-1">
+                  <h3 className="font-semibold">{item.name}</h3>
+                  <p>Price: ₹{item.price}</p>
+                  <div className="flex items-center space-x-4">
+                        <button
+                          className="px-2 py-1 bg-gray-200 rounded-full text-black font-semibold"
+                          onClick={() => updateCartItemQuantity(item.id, item.quantity - 1)}
+                          disabled={item.quantity <= 1}
+                        >
+                          -
+                        </button>
+                        <p>Quantity: {item.quantity}</p>
+                        <button
+                          className="px-2 py-1 bg-gray-200 rounded-full text-black font-semibold"
+                          onClick={() => updateCartItemQuantity(item.id, item.quantity + 1)}
+                        >
+                          +
+                        </button>
+                      </div>
+                  <button
+                    className="text-red-500 mt-2"
+                    onClick={() => removeFromCart(item.id)}
+                  >
+                    Remove
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
 </div>
 
   
@@ -97,7 +88,7 @@ export default function Bag() {
             <div className="space-y-4 text-sm">
               <div className="flex justify-between">
                 <span>Subtotal:</span>
-                <span>₹ 20,890.00</span>
+                <span>Rs {subtotal.toLocaleString()}</span>
               </div>
               <div className="flex justify-between">
                 <span>Estimated Delivery & Handling:</span>
@@ -107,7 +98,7 @@ export default function Bag() {
             <hr className="my-4" />
             <div className="flex justify-between text-lg font-bold">
               <span>Total:</span>
-              <span>₹ 20,890.00</span>
+              <span>Rs {subtotal.toLocaleString()}</span>
             </div>
             <Link href={"/CheckOut"}>
             <button className="w-full mt-6 bg-black text-white py-3 rounded-3xl font-medium">
@@ -118,68 +109,7 @@ export default function Bag() {
         </div>
   
         {/* Recommendations */}
-        <div className="max-w-7xl mx-auto px-4 mb-8">
-          <h3 className="text-lg font-bold mt-12 mb-4">You Might Also Like</h3>
-          <div className="flex gap-12 overflow-x-scroll md:overflow-x-hidden">
-            {/* Product 1 */}
-            <div className="flex-shrink-0 w-48 ml-8">
-              <img
-                src="/assets/Shoe1.png"
-                alt="Air Jordan"
-                className="w-full h-48 object-cover rounded-md border"
-              />
-              <h4 className="font-semibold mt-2">Air Jordan 1 Mid SE Craft</h4>
-              <p className="text-gray-500">Men&apos;s Shoes</p>
-              <p className="font-bold">MRP: ₹ 12,295.00</p>
-            </div>
-           {/* Product 2 */}
-           <div className="flex-shrink-0 w-48">
-              <img
-                src="/assets/Shirt.png"
-                alt="Air Jordan"
-                className="w-full h-48 object-cover rounded-md border"
-              />
-              <h4 className="font-semibold mt-2">Air Jordan 1 Mid SE Craft</h4>
-              <p className="text-gray-500">Men&apos;s Shoes</p>
-              <p className="font-bold">MRP: ₹ 12,295.00</p>
-            </div>
-            {/* Product 3 */}
-            <div className="flex-shrink-0 w-48">
-              <img
-                src="/assets/Shoe2.png"
-                alt="Air Jordan"
-                className="w-full h-48 object-cover rounded-md border"
-              />
-              <h4 className="font-semibold mt-2">Air Jordan 1 Mid SE Craft</h4>
-              <p className="text-gray-500">Men&apos;s Shoes</p>
-              <p className="font-bold">MRP: ₹ 12,295.00</p>
-            </div>
-            {/* Product 4 */}
-            <div className="flex-shrink-0 w-48">
-              <img
-                src="/assets/Shirt2.png"
-                alt="Air Jordan"
-                className="w-full h-48 object-cover rounded-md border"
-              />
-              <h4 className="font-semibold mt-2">Air Jordan 1 Mid SE Craft</h4>
-              <p className="text-gray-500">Men&apos;s Shoes</p>
-              <p className="font-bold">MRP: ₹ 12,295.00</p>
-            </div>
-            {/* Product 6 */}
-            <div className="flex-shrink-0 w-48">
-              <img
-                src="/assets/Shoes.png"
-                alt="Air Jordan"
-                className="w-full h-48 object-cover rounded-md border"
-              />
-              <h4 className="font-semibold mt-2">Air Jordan 1 Mid SE Craft</h4>
-              <p className="text-gray-500">Men&apos;s Shoes</p>
-              <p className="font-bold">MRP: ₹ 12,295.00</p>
-            </div>
-            
-          </div>
-        </div>
+        <Recommendation/>
       </div>
     );
   }
-  

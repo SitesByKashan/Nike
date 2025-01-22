@@ -1,10 +1,48 @@
 "use client"
 import Image from "next/image"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { IoSearch } from "react-icons/io5";
+import { client } from '@/sanity/lib/client';
+
+
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [products, setProducts] = useState<any[]>([]);
+  const [filteredProducts, setFilteredProducts] = useState<any[]>([]);
+
+    // Fetch products from Sanity
+    useEffect(() => {
+      const fetchProducts = async () => {
+        const data = await client.fetch(`*[_type == "product"]{
+          _id,
+          productName,
+          category,
+          price,
+          image,
+          description,
+        }`);
+        setProducts(data);
+        setFilteredProducts(data); // Initialize with all products
+      };
+  
+      fetchProducts();
+    }, []);
+  
+    // Handle search query change
+    const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+      const query = event.target.value.toLowerCase();
+      setSearchQuery(query);
+  
+      // Filter products based on search query
+      const filtered = products.filter((product) =>
+        product.productName.toLowerCase().includes(query)
+      );
+      setFilteredProducts(filtered);
+    };
+
   return (
     <>
       <header className="body-font bg-[#F5F5F5] h-[36px] pt-1">
@@ -57,22 +95,22 @@ export default function Header() {
 
       {/* Middle - Navigation Links */}
       <nav className="hidden md:flex ml-44 space-x-4 text-[15px]">
-        <Link href="/Products" className="hover:text-gray-600">
+        <Link href="/" className="hover:text-gray-600">
           New & Featured
         </Link>
-        <Link href="/Products" className="hover:text-gray-600">
+        <Link href="/mens" className="hover:text-gray-600">
           Men
         </Link>
-        <Link href="/Products" className="hover:text-gray-600">
+        <Link href="/womens" className="hover:text-gray-600">
           Women
         </Link>
-        <Link href="/Products" className="hover:text-gray-600">
+        <Link href="/kids" className="hover:text-gray-600">
           Kids
         </Link>
-        <Link href="/Products" className="hover:text-gray-600">
+        <Link href="/sale" className="hover:text-gray-600">
           Sale
         </Link>
-        <Link href="/Products" className="hover:text-gray-600">
+        <Link href="/SNKRS" className="hover:text-gray-600">
           SNKRS
         </Link>
       </nav>
@@ -80,21 +118,46 @@ export default function Header() {
       {/* Right Side - Search and Wishlist */}
       <div className="hidden md:flex space-x-4 items-center">
         {/* Search Bar */}
-        <div className="flex items-center">
-          <img
-            src="/assets/Search.png"
-            alt="Search Bar"
-            className="w-[180px] h-[40px]"
-          />
-        </div>
+   <div className="relative">
+  <div className="flex items-center gap-[10px] px-[15px] py-[5px] border border-gray-300 rounded-2xl">
+    <input
+      type="text"
+      placeholder="Search..."
+      value={searchQuery}
+      onChange={handleSearch}
+      className="bg-transparent outline-none text-black text-[14px] placeholder:text-gray-500 w-full"
+    />
+    <IoSearch className="text-black w-[20px] h-[20px]" />
+  </div>
+
+  {/* Dropdown for filtered products */}
+  {searchQuery && filteredProducts.length > 0 && (
+    <div className="absolute bg-white w-full border border-gray-300 rounded-md shadow-lg mt-2 z-10">
+      <ul>
+        {filteredProducts.map((product: any) => (
+          <li
+            key={product._id}
+            className="px-4 py-2 text-black hover:bg-gray-200 cursor-pointer"
+          >
+            <Link href={`/Products/${product._id}`}>
+              {product.productName}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+</div>
 
         {/* Wishlist Icon */}
         <div className="flex items-center">
+          <Link href={"/WishList"}>
           <img
             src="/assets/Heart.png"
             alt="Wishlist Icon"
             className="w-[36px] h-[36px]"
           />
+          </Link>
           <Link href={"/Bag"}>
             <img
             src="/assets/Bag.png"
@@ -128,41 +191,66 @@ export default function Header() {
       {isMenuOpen && (
         <div className="absolute top-[80px] left-0 w-full bg-white shadow-md md:hidden">
           <nav className="flex flex-col items-center space-y-4 p-4">
-            <Link href="/Products" className="hover:text-gray-600">
+            <Link href="/" className="hover:text-gray-600">
               New & Featured
             </Link>
-            <Link href="/Products" className="hover:text-gray-600">
+            <Link href="/mens" className="hover:text-gray-600">
               Men
             </Link>
-            <Link href="/Products" className="hover:text-gray-600">
+            <Link href="/womens" className="hover:text-gray-600">
               Women
             </Link>
-            <Link href="/Products" className="hover:text-gray-600">
+            <Link href="/kids" className="hover:text-gray-600">
               Kids
             </Link>
-            <Link href="/Products" className="hover:text-gray-600">
+            <Link href="/sale" className="hover:text-gray-600">
               Sale
             </Link>
-            <Link href="/Products" className="hover:text-gray-600">
+            <Link href="/SNKRS" className="hover:text-gray-600">
               SNKRS
             </Link>
             {/* Center - Search and Wishlist for Small Screens */}
             <div className="flex flex-col items-center space-y-2 mt-4">
               {/* Search Bar */}
-              <div className="flex items-center">
-                <img
-                  src="/assets/Search.png"
-                  alt="Search Bar"
-                  className="w-[150px] h-[30px]"
-                />
-              </div>
+              <div className="relative">
+  <div className="flex items-center gap-[10px] px-[15px] py-[5px] border border-gray-300 rounded-2xl">
+    <input
+      type="text"
+      placeholder="Search..."
+      value={searchQuery}
+      onChange={handleSearch}
+      className="bg-transparent outline-none text-black text-[14px] placeholder:text-gray-500 w-full"
+    />
+    <IoSearch className="text-black w-[20px] h-[20px]" />
+  </div>
+
+  {/* Dropdown for filtered products */}
+  {searchQuery && filteredProducts.length > 0 && (
+    <div className="absolute bg-white w-full border border-gray-300 rounded-md shadow-lg mt-2 z-10">
+      <ul>
+        {filteredProducts.map((product: any) => (
+          <li
+            key={product._id}
+            className="px-4 py-2 text-black hover:bg-gray-200 cursor-pointer"
+          >
+            <Link href={`/Products/${product._id}`}>
+              {product.productName}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+</div>
               {/* Wishlist Icon */}
               <div className="flex items-center">
+              <Link href={"/WishList"}>
           <img
             src="/assets/Heart.png"
             alt="Wishlist Icon"
             className="w-[36px] h-[36px]"
           />
+          </Link>
           <Link href={"/Bag"}>
             <img
             src="/assets/Bag.png"
