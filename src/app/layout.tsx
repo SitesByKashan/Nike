@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { CartProvider } from "@/components/CartContext";
 import { WishListProvider } from "@/components/WishList";
+import { ToastContainer } from "react-toastify";
 
 export const metadata: Metadata = {
   title: "Nike Store",
@@ -18,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="shortcut icon" href="/assets/Nike.png" type="image/x-icon" />
+        <link rel="favicon" href="/assets/Nike.png" type="image/x-icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body>
@@ -26,6 +27,7 @@ export default function RootLayout({
         <WishListProvider>
           <Header />
           {children}
+          <ToastContainer />
           <Footer />
           </WishListProvider>
         </CartProvider>
