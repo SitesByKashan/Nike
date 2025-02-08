@@ -41,10 +41,5 @@ export const orderSchema = {
       type: 'string',
       title: 'Total Amount',
     },
-    {
-      name: 'Status',
-      type: 'string',
-      title: 'Status',
-    },
   ],
 };
