@@ -25,7 +25,7 @@ export default function SNKRS() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const query = `*[_type == "product" && category in ["Men's Shoes", "Women's Shoes", "Men's Running Shoes"]]{
+        const query = `*[_type == "product" && category in ["Men's Shoes", "Women's Shoes", "Men's Running Shoes", "SNKRS"]]{
           _id,
           productName,
           category,

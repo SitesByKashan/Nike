@@ -25,7 +25,7 @@ export default function Mens() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const query = `*[_type == "product" && category in ["Men's Short-Sleeve Graphic Fitness Top"]]{
+        const query = `*[_type == "product" && category in ["Men's Short-Sleeve Graphic Fitness Top", "Mens"]]{
           _id,
           productName,
           category,

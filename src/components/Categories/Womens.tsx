@@ -25,7 +25,7 @@ export default function Womens() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const query = `*[_type == "product" && category in ["Men's Training Shoes", "Women's Basketball Jersey"]]{
+        const query = `*[_type == "product" && category in ["Men's Training Shoes", "Women's Basketball Jersey", "Womens]]{
           _id,
           productName,
           category,
